@@ -4,54 +4,54 @@ export const Routes = [
 // stat
 {
     method: "get",
-    route: "/stats",
+    route: "/api/v1/stats",
     controller: MainController,
     action: "statsAll"
 }, {
     method: "get",
-    route: "/stats/:id",
+    route: "/api/v1/stats/:id",
     controller: MainController,
     action: "statsOne"
 }, {
     method: "post",
-    route: "/stats",
+    route: "/api/v1/stats",
     controller: MainController,
     action: "statsSave"
 }, {
     method: "patch",
-    route: "/stats/:id",
+    route: "/api/v1/stats/:id",
     controller: MainController,
     action: "statsUpdate"
 }, {
     method: "delete",
-    route: "/stats/:id",
+    route: "/api/v1/stats/:id",
     controller: MainController,
     action: "statsRemove"
 }, 
 //user has stat
 {
     method: "get",
-    route: "/users-stats",
+    route: "/api/v1/users-stats",
     controller: MainController,
     action: "userHasStatAll"
 },{
     method: "get",
-    route: "/users-stats/:id",
+    route: "/api/v1/users-stats/:id",
     controller: MainController,
     action: "userHasStatOne"
 },{
     method: "post",
-    route: "/users-stats",
+    route: "/api/v1/users-stats",
     controller: MainController,
     action: "userHasStatCreate"
 },{
     method: "patch",
-    route: "/users-stats/:id",
+    route: "/api/v1/users-stats/:id",
     controller: MainController,
     action: "userHasStatUpdate"
 },{
     method: "delete",
-    route: "/users-stats/:id",
+    route: "/api/v1/users-stats/:id",
     controller: MainController,
     action: "userHasStatRemoveById"
 },]
