@@ -2,13 +2,12 @@ import { NextFunction, Request, Response } from "express"
 import { StatController } from "./StatController"
 import { UserHasStatController } from "./UserHasStatController"
 import { Channel } from "amqplib"
-import axios from "axios"
 import "dotenv/config"
 
 export class MainController{
 
-    private statController = new StatController
-    private userHasStatController = new UserHasStatController
+    private readonly statController = new StatController
+    private readonly userHasStatController = new UserHasStatController
 
     // food diary
 

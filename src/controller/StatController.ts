@@ -1,11 +1,10 @@
 import { AppDataSource } from "../data-source"
 import { NextFunction, Request, Response } from "express"
 import { Stat } from "../entity/Stat"
-import axios from "axios"
 
 export class StatController {
 
-    private statRepository = AppDataSource.getRepository(Stat)
+    private readonly statRepository = AppDataSource.getRepository(Stat)
 
     async all(req:Request, res:Response) {
         const { u } = req.query;

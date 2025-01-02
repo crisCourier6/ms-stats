@@ -2,12 +2,11 @@ import { AppDataSource } from "../data-source"
 import { NextFunction, Request, Response } from "express"
 import { UserHasStat } from "../entity/UserHasStat"
 import { Stat } from "../entity/Stat"
-import axios from "axios"
 
 export class UserHasStatController {
 
-    private userHasStatRepository = AppDataSource.getRepository(UserHasStat)
-    private statRepository = AppDataSource.getRepository(Stat)
+    private readonly userHasStatRepository = AppDataSource.getRepository(UserHasStat)
+    private readonly statRepository = AppDataSource.getRepository(Stat)
 
     async all(req:Request, res:Response) {
         const {u, s} = req.query
